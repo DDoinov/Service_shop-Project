@@ -1,0 +1,66 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <script lang="text/javascript">
+            
+            function Car_list()
+            {
+                if (window.XMLHttpRequest)
+   {// code for IE7+, Firefox, Chrome, Opera, Safari
+   xmlhttp=new XMLHttpRequest();
+   }
+ else
+   {// code for IE6, IE5
+   xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+   }
+ xmlhttp.onreadystatechange=function()
+   {
+   if (xmlhttp.readyState==4 && xmlhttp.status==200)
+     {
+     document.getElementById("c_list").innerHTML=xmlhttp.responseText;
+     }
+   }
+   
+ xmlhttp.open("GET","car_table.php",true);
+ xmlhttp.send();
+            }
+ //Edit function------------------------------------------------------------
+ //-------------------------------------------------------------------------
+ function editcar(str)
+            {
+                if (window.XMLHttpRequest)
+   {// code for IE7+, Firefox, Chrome, Opera, Safari
+   xmlhttp=new XMLHttpRequest();
+   }
+ else
+   {// code for IE6, IE5
+   xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+   }
+ xmlhttp.onreadystatechange=function()
+   {
+   if (xmlhttp.readyState==4 && xmlhttp.status==200)
+     {
+     document.getElementById("c_list").innerHTML=xmlhttp.responseText;
+     }
+   }
+   
+ xmlhttp.open("GET","editcar.php?p="+str,true);
+ xmlhttp.send();
+            }
+ //Update Function----------------------------------------------------------
+ //-------------------------------------------------------------------------
+ 
+        </script>
+        <script src="js/ajaxsbmt.js" type="text/javascript"></script>
+
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body onload="Car_list()">
+        <div id="c_list"></div>
+    </body>
+</html>
