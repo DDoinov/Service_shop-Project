@@ -1,0 +1,27 @@
+function delete_part(str)
+{
+$yes=window.confirm("Are You sure You want to delete this part?")
+if(!$yes)
+    {exit; }
+    
+if (window.XMLHttpRequest)
+   {// code for IE7+, Firefox, Chrome, Opera, Safari
+   xmlhttp=new XMLHttpRequest();
+   }
+ else
+   {// code for IE6, IE5
+   xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+   }
+ xmlhttp.onreadystatechange=function()
+   {
+   if (xmlhttp.readyState==4 && xmlhttp.status==200)
+     {
+     document.getElementById("p_list").innerHTML=xmlhttp.responseText;
+     }
+   }
+  
+ xmlhttp.open("GET","del_part.php?p="+str,true);
+ xmlhttp.send();  
+}
+
+

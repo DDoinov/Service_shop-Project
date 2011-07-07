@@ -1,7 +1,7 @@
 <?php
 echo'<p>Fields with \' * \' must be defined.</p><br/>';
 echo "<form name=\"new_car\" action=\"insert_car.php\" method=\"GET\">";
-echo "<table border=\"1\">
+echo "<table >
     
 <tr>
     <td bgcolor=#66cc00>Registration Number*</td>
@@ -64,7 +64,7 @@ echo "<table border=\"1\">
 
 echo"<input name=\"submit\" type=\"submit\" value=\"Submit\">";
 
-echo "</form>"
-
+echo "</form>";
+echo "<button onClick=\"ajax_request('car_table.php')'\">Cancle</button>";
 
 ?>

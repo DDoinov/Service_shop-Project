@@ -24,6 +24,20 @@ $c_other=$_REQUEST['c_other'];
           }
           else              echo '<br>Connected succesfuly!';
           $db=mysql_select_db('service_shop');
+          
+//escape string----------------------------------------------------------------
+//-----------------------------------------------------------------------------
+$reg_no=mysql_real_escape_string($reg_no);
+$c_make=mysql_real_escape_string($c_make);
+$c_model=mysql_real_escape_string($c_model);
+$c_year=mysql_real_escape_string($c_year);
+$eng_no=mysql_real_escape_string($eng_no);
+$frame_no=mysql_real_escape_string($frame_no);
+$c_color=mysql_real_escape_string($c_color);
+$eng_vol=mysql_real_escape_string($eng_vol);
+$c_owner=mysql_real_escape_string($c_owner);
+$own_num=mysql_real_escape_string($own_num);
+$c_other=mysql_real_escape_string($c_other);
 //Define update string---------------------------------------------------------
 //-----------------------------------------------------------------------------
 

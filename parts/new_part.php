@@ -1,10 +1,10 @@
 <?php
 
 echo"<form name=\"new_part\" action=\"insert_part.php\" method=\"GET\">
-        <table border=\"1\">
+        <table>
         <tr>
         <td bgcolor=#66cc00>Part:</td>
-        <td><input name=\"p_name\" size=\"15\" maxlenght=\"30\"></td>
+        <td><input name=\"p_name\" size=\"15\" maxlenght=\"20\"></td>
         </tr>
         <tr>
         <td bgcolor=#66cc00>Part information:</td>
@@ -16,6 +16,9 @@ echo"<form name=\"new_part\" action=\"insert_part.php\" method=\"GET\">
 
         </table>
         <input type=\"submit\" value=\"Done\">
+        <button type=\"button\"
+            onclick=\"parts_request('parts_table.php')\">Cancle</button>
             </form>";
+        
 
 ?>

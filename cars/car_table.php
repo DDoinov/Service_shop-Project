@@ -13,7 +13,7 @@ header("Cache-Control: no-cache, must-revalidate");
           $rez_num=  mysql_num_rows($rez);
           
           
-          echo "<table width=\"100%\" border=\"1\">";
+          echo "<table>";
           echo "<tr bgcolor=#66cc00>
                 <td>Action</td>
                 <td>Reg. No*</td>
@@ -54,7 +54,7 @@ If($c_other==''){$c_other='No info';}
      echo "<tr>
                
                 <td><button  
-                        onclick=\"del_car('$car_array[reg_no]')\">Delete</button>
+                        onclick=\"delete_car('$car_array[reg_no]')\">Delete</button>
               
                     <button 
                         onclick=\"ajax_edit('$car_array[reg_no]','editcar.php')\">Edit</button>

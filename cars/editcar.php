@@ -15,7 +15,7 @@ echo 'Control Variable is : '.$p;
           $rez_num=  mysql_num_rows($edit_rez);
           echo 'Fields with \"*\" must be defined';
           
-          echo "<table width=\"100%\" border=\"1\">";
+          echo "<table >";
           echo "<tr bgcolor=#66cc00>
                 <td>Action</td>
                 <td>Reg. No*</td>
@@ -78,7 +78,7 @@ echo 'Control Variable is : '.$p;
                    {
     echo "<tr>
                 <td><button  
-                    onclick=\"deletecar('$edit_array[reg_no]')\">Delete</button>
+                    onclick=\"delete_car('$edit_array[reg_no]')\">Delete</button>
               
                     <button 
                        onclick=\"ajax_edit('$edit_array[reg_no]','editcar.php')\">

@@ -1,0 +1,33 @@
+/* 
+    Document   : mystyle
+    Created on : Jul 7, 2011, 2:29:38 PM
+    Author     : AguGuBu
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+table{
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    padding-right: 1px;
+    padding-left: 1px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    width: 100%;
+    border-right-style: outset;
+    border-left-style: outset;
+    border-bottom-style: outset;
+    border-top-style: outset;
+}
+
+

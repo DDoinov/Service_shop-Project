@@ -1,17 +1,15 @@
 <?php
+
 //get variables------------------------------------------------------------
 //-------------------------------------------------------------------------
+$p=$_REQUEST['p'];
 $p_name=$_REQUEST['p_name'];
 $p_other=$_REQUEST['p_other'];
 
 //check is the variables are set-------------------------------------------
 //only part name is needed-------------------------------------------------
 
-if($p_name=='')
-    {
-    echo "Part name is empty";
-    include ("new_part.php");
-    }
+if($p_name==''){exit ();}
 else
     {
 //Connect to database----------------------------------------------------------
@@ -26,8 +24,8 @@ else
 //-----------------------------------------------------------------------------
 $p_name=mysql_real_escape_string($p_name);
 $p_other=mysql_real_escape_string($p_other);
-$insert="INSERT parts_info SET p_name='".$p_name."',
-    p_other='".$p_other."' ;"; 
+$insert="UPDATE parts_info SET p_name='".$p_name."',
+    p_other='".$p_other."' WHERE part_index LIKE ".$p." ;"; 
 
 
 
@@ -39,9 +37,10 @@ echo "<br/>Result: ".mysql_error();
 
 
 
-header("Location: parts.html");
+
 }
 
-
+include('parts_table.php');
     
+
 ?>

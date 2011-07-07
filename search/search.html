@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../main/mystyle.css" />
+        <script type="text/javascript" src="ajax_search.js"></script>
+        <script type="text/javascript" src="del_card.js"></script>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <p>Browse trough Service cards. </p>
+        <select id="search_by" onChange="ajax_search(this.value)">
+            <option >Search by:</option>
+            <option id="1">Car</option>
+            <option id="2">Date</option>
+            <option id="3">Unfinished</option>
+        </select>
+        <p id="choice"></p>
+        <div id="rez"></div>
+    </body>
+</html>
